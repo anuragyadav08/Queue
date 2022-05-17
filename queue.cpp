@@ -1,16 +1,13 @@
-
-
 #include <iostream>
-
 using namespace std;
-#define max 50;
-int array_queue[50]={1,2,3,4,5};
+int MAX=50;
+int array_queue[50];
 int rear=-1;
 int front=-1;
 void insert_element()
 {
     int item;
-    if(rear==max-1)
+    if(rear==MAX-1)
     {
         cout<<"Queue Overflow !"<<endl;
     }
@@ -19,12 +16,13 @@ void insert_element()
         if(front==-1)
         {
             front=0;
+        }
             cout<<"Insert The Element in Queue :"<<endl;
             cin>>item;
             rear++;
             array_queue[rear]=item;
             
-        }
+        
     }
 }
 void delete_element()
@@ -62,6 +60,7 @@ int main()
     int ch;
     while(1)
     {
+    cout<<endl;    
     cout<<"1: Insert Element in Queue"<<endl;
     cout<<"2: Delete Element from Queue"<<endl;
     cout<<"3: Display All Elements of Queue"<<endl;
@@ -87,3 +86,6 @@ int main()
     }
     return 0;
 }
+
+
+
